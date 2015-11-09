@@ -41,7 +41,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2011 Apple Inc. All Rights Reserved.
+ Copyright (C) 2012 Apple Inc. All Rights Reserved.
  
  */
 
@@ -60,15 +60,15 @@ void main()
     
     // BT.601, which is the standard for SDTV is provided as a reference
     /*
-    rgb = mat3(      1,       1,       1,
-                     0, -.39465, 2.03211,
-               1.13983, -.58060,       0) * yuv;
+    rgb = mat3(    1,       1,     1,
+                   0, -.34413, 1.772,
+               1.402, -.71414,     0) * yuv;
      */
     
     // Using BT.709 which is the standard for HDTV
-    rgb = mat3(      1,       1,       1,
-                     0, -.21482, 2.12798,
-               1.28033, -.38059,       0) * yuv;
+    rgb = mat3(      1,       1,      1,
+                     0, -.18732, 1.8556,
+               1.57481, -.46813,      0) * yuv;
     
     gl_FragColor = vec4(rgb, 1);
 }

@@ -45,5 +45,9 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>video-camera</string>
+	</array>
 </dict>
 </plist>

@@ -41,7 +41,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2011 Apple Inc. All Rights Reserved.
+ Copyright (C) 2012 Apple Inc. All Rights Reserved.
  
  */
 
@@ -312,7 +312,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     [dataOutput setAlwaysDiscardsLateVideoFrames:YES]; // Probably want to set this to NO when recording
     
     //-- Set to YUV420.
-    [dataOutput setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange] 
+    [dataOutput setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_420YpCbCr8BiPlanarFullRange] 
                                                              forKey:(id)kCVPixelBufferPixelFormatTypeKey]]; // Necessary for manual preview
     
     // Set dispatch to be on the main thread so OpenGL can do things with the data
